@@ -24,6 +24,7 @@
 	<ItemGroup>
 		<Folder Include="Core\Exceptions\" />
 		<Folder Include="Infrastructure\Repositories\" />
+		<Folder Include="ViewModels\" />
 		<Folder Include="Services\Dtos\" />
 		<Folder Include="Services\Interfaces\" />
 		<Folder Include="Domain\Validators\" />
