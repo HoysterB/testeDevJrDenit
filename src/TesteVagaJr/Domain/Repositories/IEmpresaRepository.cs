@@ -10,6 +10,7 @@ public interface IEmpresaRepository
 
     Task<IEnumerable<Empresa>> GetAllEmpresasAsync();
     Task<Empresa> GetEmpresaAsync(Guid id);
+    Task<Empresa> GetByCnpj(string cnpj);
     Task<IEnumerable<Fornecedor>> GetAllFornecedoresDeUmaEmpresa(Guid empresaId);
 
     IUnitOfWork UnitOfWork { get; }

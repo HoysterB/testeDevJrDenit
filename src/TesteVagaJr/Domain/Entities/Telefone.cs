@@ -1,6 +1,6 @@
 ﻿namespace TesteVagaJr.Domain.Entities;
 
-public class Telefone
+public class Telefone : Entity
 {
     public string DDD { get; private set; }
     public string Numero { get; private set; }
@@ -12,5 +12,10 @@ public class Telefone
     {
         this.DDD = DDD;
         this.Numero = numero;
+    }
+
+    public override bool Validate()
+    {
+        throw new NotImplementedException();
     }
 }

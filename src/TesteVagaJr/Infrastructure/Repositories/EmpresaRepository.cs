@@ -33,6 +33,17 @@ public class EmpresaRepository : IEmpresaRepository
         return empresa;
     }
 
+    public async Task<Empresa> GetByCnpj(string cnpj)
+    {
+        var empresa = await _context.Empresas
+                                .Where(x => x.Cnpj == cnpj)
+                                .AsNoTracking()
+                                .ToListAsync();
+        
+        return empresa.FirstOrDefault();
+
+    }
+
     public async Task<IEnumerable<Fornecedor>> GetAllFornecedoresDeUmaEmpresa(Guid empresaId)
     {
         var fornecedores = await _context.Fornecedores.Where(x => x.EmpresaId == empresaId).ToListAsync();

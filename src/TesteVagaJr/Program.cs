@@ -13,6 +13,9 @@ builder.Services.AddAutoMapper(typeof(EmpresaProfile).Assembly);
 builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
 builder.Services.AddScoped<IEmpresaService, EmpresaService>();
 
+builder.Services.AddScoped<IFornecedorRepository
+builder.Services.AddScoped<IFornecedorService, FornecedorService>();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -4,7 +4,7 @@ using TesteVagaJr.Domain.Entities;
 
 namespace TesteVagaJr.Infrastructure.Mappings;
 
-public class ForncedorMapper : IEntityTypeConfiguration<Fornecedor>
+public class FornecedorMapper : IEntityTypeConfiguration<Fornecedor>
 {
     public void Configure(EntityTypeBuilder<Fornecedor> builder)
     {
@@ -22,5 +22,6 @@ public class ForncedorMapper : IEntityTypeConfiguration<Fornecedor>
         builder.HasOne(x => x.Empresa)
             .WithMany(x => x.Fornecedores)
             .HasForeignKey(x => x.EmpresaId);
+    
     }
 }

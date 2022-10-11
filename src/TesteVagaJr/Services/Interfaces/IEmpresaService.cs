@@ -4,7 +4,8 @@ namespace TesteVagaJr.Services.Interfaces;
 
 public interface IEmpresaService
 {
-    Task<EmpresaDto> GetEmpresaAsync();
+    Task<EmpresaDto>AddEmpresaAsync(EmpresaDto empresaDTO);
+    Task<EmpresaDto> GetEmpresaAsync(Guid empresaId);
     Task<IEnumerable<EmpresaDto>> GetAllEmpresasAsync();
     Task<IEnumerable<FornecedorDto>> GetFornecedorAsync(Guid empresaId);
 

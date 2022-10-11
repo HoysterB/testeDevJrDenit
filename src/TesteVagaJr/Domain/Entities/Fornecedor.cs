@@ -1,4 +1,7 @@
-﻿namespace TesteVagaJr.Domain.Entities;
+﻿using TesteVagaJr.Core.Exceptions;
+using TesteVagaJr.Domain.Validators;
+
+namespace TesteVagaJr.Domain.Entities;
 
 public class Fornecedor : Entity
 {
@@ -40,8 +43,45 @@ public class Fornecedor : Entity
         Telefones.Remove(telefone);
     }
 
+    public void ChangeNome(string nome)
+    {
+        Nome = nome;
+        Validate();
+    }
+
+    public void ChangeNumeroDocumento(string numeroDocumento)
+    {
+        NumeroDocumento = numeroDocumento;
+        Validate();
+    }
+
+    public void ChangeTipoDocumento(ETipoDocumento tipoDocumento)
+    {
+        TipoDocumento = tipoDocumento;
+        Validate();
+    }
+
+    public void ChangeTipoFornecedor(ETipoFornecedor tipoFornecedor)
+    {
+        TipoFornecedor = tipoFornecedor;
+        Validate();
+    }
+
     public override bool Validate()
     {
-        throw new NotImplementedException();
+        var validator = new FornecedorValidator();
+        var validation = validator.Validate(this);
+
+        if (!validation.IsValid)
+        {
+            foreach (var error in validation.Errors)
+            
+                _errors.Add(error.ErrorMessage);
+
+            throw new DomainException("Alguns campos estão inválidos", _errors);
+
+        }
+
+        return true;
     }
 }

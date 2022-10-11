@@ -40,9 +40,6 @@ public class Empresa : Entity
         Validate();
     }
 
-
-
-
     public override bool Validate()
     {
         var validator = new EmpresaValidator();
