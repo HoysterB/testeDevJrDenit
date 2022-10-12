@@ -8,6 +8,10 @@ namespace TesteVagaJr.Infrastructure.Repositories;
 public class EmpresaRepository : IEmpresaRepository
 {
     private readonly ApplicationDbContext _context;
+    public EmpresaRepository(ApplicationDbContext context)
+    {
+        _context = context;
+    }
     public IUnitOfWork UnitOfWork => _context;
 
     public void AdicionarFornecedor(Fornecedor fornecedor)

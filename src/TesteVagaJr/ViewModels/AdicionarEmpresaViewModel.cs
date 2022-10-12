@@ -11,14 +11,14 @@ namespace TesteVagaJr.ViewModels
          public string Uf { get;  set; }
 
          [Required(ErrorMessage = "O nome fantasia não pode ser vazio.")]
-         [MinLength(40, ErrorMessage = "O nome fantasia deve ter no mínimo 40 caracteres")]
+         [MinLength(2, ErrorMessage = "O nome fantasia deve ter no mínimo 2 caracteres")]
          [MaxLength(100, ErrorMessage = "O nome fantasia deve ter no máximo 100 caracteres")]
          public string NomeFantasia { get;  set; }
          
 
          [Required(ErrorMessage = "O cnpj não pode ser vazio.")]
-         [MinLength(11, ErrorMessage = "O cnpj deve ter no mínimo 11 caracteres.")]
-         [MaxLength(11, ErrorMessage = "O cnpj deve ter no máximo 11 carateres.")]
+         [MinLength(14, ErrorMessage = "O cnpj deve ter no mínimo 14 caracteres.")]
+         [MaxLength(14, ErrorMessage = "O cnpj deve ter no máximo 14 carateres.")]
          public string Cnpj { get;  set; }
     }
 
