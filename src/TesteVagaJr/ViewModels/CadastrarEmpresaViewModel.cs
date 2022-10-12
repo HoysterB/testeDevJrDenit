@@ -3,7 +3,7 @@
 namespace TesteVagaJr.ViewModels
 {
 
-    public class AdicionarEmpresaViewModel
+    public class CadastrarEmpresaViewModel
     {
          [Required(ErrorMessage = "A uf não pode ser vazia.")]
          [MinLength(2, ErrorMessage = "A uf deve ter no mínimo 2 caracteres.")]

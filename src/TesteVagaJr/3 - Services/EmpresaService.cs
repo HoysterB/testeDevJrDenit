@@ -19,7 +19,7 @@ public class EmpresaService : IEmpresaService
 
     public async Task<EmpresaDto> AddEmpresaAsync(EmpresaDto empresaDto)
     {
-        var empresaExists = await _empresaRepository.GetByCnpj(empresaDto.Cnpj);
+        var empresaExists = await _empresaRepository.GetEmpresaByCnpj(empresaDto.Cnpj);
 
         if(empresaExists != null)
         {
@@ -29,7 +29,7 @@ public class EmpresaService : IEmpresaService
         var empresa = _mapper.Map<Empresa>(empresaDto);
         empresa.Validate();
 
-         _empresaRepository.AdicionarEmpresa(empresa);
+         _empresaRepository.CadastrarEmpresa(empresa);
          
          var success = await _empresaRepository.UnitOfWork.Commit();
 
@@ -41,6 +41,30 @@ public class EmpresaService : IEmpresaService
          return default;    
 
     }
+
+    public async Task<FornecedorDto> AdicionarFornecedor(FornecedorDto fornecedorDto)
+    {
+        var fornecedorExists = await _empresaRepository.GetFornecedorById(fornecedorDto.Id);
+
+        if (fornecedorExists != null)
+        {
+            throw new DomainException("O fornecedor informado já existe nesta empresa.");
+        }
+
+        var fornecedor = _mapper.Map<Fornecedor>(fornecedorDto);
+        fornecedor.Validate();
+
+        _empresaRepository.AdicionarFornecedor(fornecedor);
+
+        var success = await _empresaRepository.UnitOfWork.Commit();
+
+        if (success)
+        {
+            return fornecedorDto;
+        }
+
+        return default;
+    }
     
 
     public Task<EmpresaDto> GetEmpresaAsync(Guid empresaId)
@@ -48,9 +72,11 @@ public class EmpresaService : IEmpresaService
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<EmpresaDto>> GetAllEmpresasAsync()
+    public async Task<IEnumerable<EmpresaDto>> GetAllEmpresasAsync()
     {
-        throw new NotImplementedException();
+        var empresas = await _empresaRepository.GetAllEmpresasAsync();
+       
+        return _mapper.Map<IEnumerable<EmpresaDto>>(empresas);
     }
 
     public Task<IEnumerable<FornecedorDto>> GetFornecedorAsync(Guid empresaId)

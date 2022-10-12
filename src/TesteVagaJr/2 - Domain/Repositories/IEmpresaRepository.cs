@@ -5,12 +5,19 @@ namespace TesteVagaJr.Domain.Repositories;
 
 public interface IEmpresaRepository
 {
-    void AdicionarFornecedor(Fornecedor fornecedor);
-    void AdicionarEmpresa(Empresa empresa);
+   
+    void CadastrarEmpresa(Empresa empresa);
 
     Task<IEnumerable<Empresa>> GetAllEmpresasAsync();
     Task<Empresa> GetEmpresaAsync(Guid id);
-    Task<Empresa> GetByCnpj(string cnpj);
+
+
+    Task<Empresa> GetEmpresaByCnpj(string cnpj);
+
+
+    void AdicionarFornecedor(Fornecedor fornecedor);
+    void RemoverFornecedor(Guid id);
+    Task<Fornecedor> GetFornecedorById(Guid id);
     Task<IEnumerable<Fornecedor>> GetAllFornecedoresDeUmaEmpresa(Guid empresaId);
 
     IUnitOfWork UnitOfWork { get; }
