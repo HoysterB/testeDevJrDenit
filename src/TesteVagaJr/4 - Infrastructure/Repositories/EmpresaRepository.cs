@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal;
 using TesteVagaJr.Core;
 using TesteVagaJr.Domain.Entities;
 using TesteVagaJr.Domain.Repositories;

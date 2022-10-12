@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using TesteVagaJr.Core.Exceptions;
-using TesteVagaJr.Domain.Dtos;
 using TesteVagaJr.Domain.Entities;
 using TesteVagaJr.Domain.Repositories;
+using TesteVagaJr.Services.Dtos;
 using TesteVagaJr.Services.Interfaces;
 
 namespace TesteVagaJr.Services;

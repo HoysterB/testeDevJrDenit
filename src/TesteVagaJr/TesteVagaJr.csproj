@@ -22,15 +22,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Core\Exceptions\" />
-		<Folder Include="Infrastructure\Repositories\" />
 		<Folder Include="ViewModels\" />
-		<Folder Include="Services\Dtos\" />
-		<Folder Include="Services\Interfaces\" />
-		<Folder Include="Domain\Validators\" />
-		<Folder Include="Domain\Repositories\" />
-		<Folder Include="Infrastructure\Mappings\" />
-		<Folder Include="Services\Profiles\" />
 	</ItemGroup>
 
 </Project>

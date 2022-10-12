@@ -1,4 +1,4 @@
-﻿using TesteVagaJr.Domain.Dtos;
+﻿using TesteVagaJr.Services.Dtos;
 
 namespace TesteVagaJr.Services.Interfaces;
 

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using TesteVagaJr.Domain.Dtos;
 using TesteVagaJr.Domain.Entities;
+using TesteVagaJr.Services.Dtos;
 
 namespace TesteVagaJr.Services.Profiles;
 

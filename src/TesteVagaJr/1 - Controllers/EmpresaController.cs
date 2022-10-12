@@ -1,12 +1,10 @@
-﻿using System;
-using AutoMapper;
-using TesteVagaJr.ViewModels;
-using TesteVagaJr.Services;
-using TesteVagaJr.Utilities;
-using TesteVagaJr.Services.Interfaces;
-using TesteVagaJr.Core.Exceptions;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using TesteVagaJr.Domain.Dtos;
+using TesteVagaJr.Core.Exceptions;
+using TesteVagaJr.Services.Dtos;
+using TesteVagaJr.Services.Interfaces;
+using TesteVagaJr.Utilities;
+using TesteVagaJr.ViewModels;
 
 namespace TesteVagaJr.Controllers;
 

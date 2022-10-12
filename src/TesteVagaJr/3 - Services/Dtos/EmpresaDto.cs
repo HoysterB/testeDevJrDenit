@@ -1,4 +1,4 @@
-﻿namespace TesteVagaJr.Domain.Dtos;
+﻿namespace TesteVagaJr.Services.Dtos;
 
 public class EmpresaDto
 {

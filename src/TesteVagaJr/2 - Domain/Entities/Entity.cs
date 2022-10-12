@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.DataAnnotations;
-
-namespace TesteVagaJr.Domain.Entities;
+﻿namespace TesteVagaJr.Domain.Entities;
 
 public abstract class Entity
 {

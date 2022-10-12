@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\testeDevJrDnit\\src\\TesteVagaJr\\TesteVagaJr.csproj": {}
+    "C:\\Repositories\\teste\\src\\TesteVagaJr\\TesteVagaJr.csproj": {}
   },
   "projects": {
-    "C:\\testeDevJrDnit\\src\\TesteVagaJr\\TesteVagaJr.csproj": {
+    "C:\\Repositories\\teste\\src\\TesteVagaJr\\TesteVagaJr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\testeDevJrDnit\\src\\TesteVagaJr\\TesteVagaJr.csproj",
+        "projectUniqueName": "C:\\Repositories\\teste\\src\\TesteVagaJr\\TesteVagaJr.csproj",
         "projectName": "TesteVagaJr",
-        "projectPath": "C:\\testeDevJrDnit\\src\\TesteVagaJr\\TesteVagaJr.csproj",
-        "packagesPath": "C:\\Users\\diniz\\.nuget\\packages\\",
-        "outputPath": "C:\\testeDevJrDnit\\src\\TesteVagaJr\\obj\\",
+        "projectPath": "C:\\Repositories\\teste\\src\\TesteVagaJr\\TesteVagaJr.csproj",
+        "packagesPath": "C:\\Users\\ataum\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositories\\teste\\src\\TesteVagaJr\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\diniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ataum\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
